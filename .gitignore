@@ -1,6 +1,5 @@
 node_modules
 dist
-.vercel
 .recorte-venv/
 
 # material da template (licença ProfitizeBuild: não publicar o prompt nem as receitas)
