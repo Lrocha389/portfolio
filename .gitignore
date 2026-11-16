@@ -1,0 +1,12 @@
+node_modules
+dist
+.recorte-venv/
+
+# material da template (licença ProfitizeBuild: não publicar o prompt nem as receitas)
+referencia/
+
+# fotos originais e prints brutos: no site entram só as versões prontas em public/img
+fonte/*
+!fonte/recorta.py
+!fonte/og.py
+!fonte/logo-lr.png
