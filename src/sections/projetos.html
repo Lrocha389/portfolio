@@ -1,0 +1,114 @@
+<!-- 01 Projetos: cabeçalho, filtro em abas com busca, três cards (print, número vermelho, nome, categoria/ano) e a
+     faixa das ferramentas. Os cards montam em paralelo; depois um agente testa o filtro. -->
+<section class="secao projetos" id="projetos" data-montagem="projetos" data-reforco="4">
+  <div class="secao__dentro">
+    <div class="secao__topo">
+      <div>
+        <span class="secao__rotulo" data-camada="texto">01 / Projetos selecionados</span>
+        <h2 class="titulo-grot" data-camada="texto" data-ajusta="64,0">Sistemas que tocam o negócio<span class="pq">.</span></h2>
+      </div>
+      <a class="link-seta sel" href="#trajetoria" data-camada="texto"><span>Todos os projetos</span> <svg class="ico" aria-hidden="true"><use href="#u-dir"/></svg></a>
+    </div>
+
+    <div class="projetos__barra">
+      <div class="abas filtro" role="group" aria-label="Filtrar projetos" data-teste="1,0">
+        <button class="aba" type="button" data-filtro="todos" aria-pressed="true" data-camada="texto">Todos</button>
+        <button class="aba" type="button" data-filtro="sistemas" aria-pressed="false" data-camada="texto">Sistemas</button>
+        <button class="aba" type="button" data-filtro="sites" aria-pressed="false" data-camada="texto">Sites</button>
+        <button class="aba" type="button" data-filtro="ia" aria-pressed="false" data-camada="texto">IA</button>
+      </div>
+      <label class="busca">
+        <svg class="ico" aria-hidden="true"><use href="#u-busca"/></svg>
+        <span class="busca__rotulo" data-camada="texto">Buscar</span>
+        <input class="busca__campo" type="search" placeholder="Nome ou categoria" autocomplete="off" data-camada="bloco" />
+      </label>
+    </div>
+
+    <ul class="projetos__grade" data-duplica>
+      <li class="projeto" data-tipo="sistemas" data-busca="barbergest barbearia vip agenda agendamento pix asaas whatsapp caixa django sistema">
+        <a class="projeto__link" href="#bastidor">
+          <span class="projeto__img" data-camada="foto"><img src="/img/proj-barbergest.webp" width="800" height="500" alt="Página de agendamento da Barbearia VIP feita no BarberGest, com o título Mais que um corte, uma experiência VIP" loading="lazy" decoding="async" /></span>
+          <span class="projeto__etiqueta" data-camada="texto">Sistema + agenda</span>
+          <span class="projeto__pe" data-camada="bloco">
+            <strong class="projeto__num" data-camada="texto">01</strong>
+            <span class="projeto__nome" data-camada="texto">BarberGest</span>
+            <span class="projeto__meta" data-camada="texto">Sistemas / 2026</span>
+            <svg class="ico projeto__seta" aria-hidden="true"><use href="#u-ne"/></svg>
+          </span>
+        </a>
+      </li>
+      <li class="projeto" data-tipo="sistemas" data-busca="gorillaz bjj jiu-jitsu academia alunos professores mensalidades painel django sistema">
+        <a class="projeto__link" href="#trajetoria">
+          <span class="projeto__img" data-camada="foto"><img src="/img/proj-gorillaz.webp" width="800" height="500" alt="Tela de entrada do Gorillaz BJJ Manager, com o logo da equipe e o formulário de acesso" loading="lazy" decoding="async" /></span>
+          <span class="projeto__etiqueta" data-camada="texto">Painel de gestão</span>
+          <span class="projeto__pe" data-camada="bloco">
+            <strong class="projeto__num" data-camada="texto">02</strong>
+            <span class="projeto__nome" data-camada="texto">Gorillaz BJJ</span>
+            <span class="projeto__meta" data-camada="texto">Sistemas / 2026</span>
+            <svg class="ico projeto__seta" aria-hidden="true"><use href="#u-ne"/></svg>
+          </span>
+        </a>
+      </li>
+      <li class="projeto" data-tipo="ia" data-busca="festim dos corvos roleplay roblox site react chatbot mestre claude ia supabase sites">
+        <a class="projeto__link" href="#trajetoria">
+          <span class="projeto__img" data-camada="foto"><img src="/img/proj-festim.webp" width="800" height="500" alt="Capa do site O Festim dos Corvos, com o nome do servidor sobre uma cena medieval chuvosa" loading="lazy" decoding="async" /></span>
+          <span class="projeto__etiqueta" data-camada="texto">Site + IA</span>
+          <span class="projeto__pe" data-camada="bloco">
+            <strong class="projeto__num" data-camada="texto">03</strong>
+            <span class="projeto__nome" data-camada="texto">Festim dos Corvos</span>
+            <span class="projeto__meta" data-camada="texto">Sites &amp; IA / 2026</span>
+            <svg class="ico projeto__seta" aria-hidden="true"><use href="#u-ne"/></svg>
+          </span>
+        </a>
+      </li>
+    </ul>
+    <p class="projetos__vazio" hidden>Nenhum projeto com esse nome. <button type="button" class="projetos__limpa">Limpar a busca</button></p>
+  </div>
+
+  <!-- ferramentas: faixa que corre sozinha (pausa, setas) e "ver todas" abre a grade com os nomes -->
+  <div class="secao__dentro ferramentas" data-montagem="ferramentas">
+    <div class="ferramentas__topo">
+      <p class="ferramentas__titulo"><span data-camada="texto">Feito com</span><strong data-camada="texto">As ferramentas de sempre.</strong></p>
+      <div class="ferramentas__ctl">
+        <button class="ferramentas__todas" type="button" aria-expanded="false" data-camada="texto"><span class="ferramentas__todas-t">Ver todas (6)</span> <svg class="ico" aria-hidden="true"><use href="#u-mais"/></svg></button>
+        <button class="ferramentas__btn ferramentas__pausa" type="button" aria-label="Pausar a faixa" aria-pressed="false" data-camada="bloco"><svg class="ico" aria-hidden="true"><use href="#u-pausa"/></svg></button>
+        <button class="ferramentas__btn" type="button" aria-label="Voltar" data-passo="-1" data-camada="bloco"><svg class="ico" aria-hidden="true"><use href="#u-esq-v"/></svg></button>
+        <button class="ferramentas__btn" type="button" aria-label="Avançar" data-passo="1" data-camada="bloco"><svg class="ico" aria-hidden="true"><use href="#u-dir-v"/></svg></button>
+      </div>
+    </div>
+    <div class="ferramentas__janela">
+      <ul class="ferramentas__trilho">
+        <li data-camada="bloco"><svg aria-hidden="true"><use href="#i-python"/></svg><span>Python</span></li>
+        <li data-camada="bloco"><svg aria-hidden="true"><use href="#i-postgresql"/></svg><span>PostgreSQL</span></li>
+        <li data-camada="bloco"><svg aria-hidden="true"><use href="#i-supabase"/></svg><span>Supabase</span></li>
+        <li data-camada="bloco"><svg aria-hidden="true"><use href="#i-claude"/></svg><span>Claude API</span></li>
+        <li data-camada="bloco"><svg aria-hidden="true"><use href="#i-nodedotjs"/></svg><span>Node.js</span></li>
+        <li data-camada="bloco"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><span>WhatsApp</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Bastidor: do rascunho ao ar. Comparador arrastável entre o wireframe e a tela final; depois de montado, um agente
+     pega a alça e arrasta de um lado para o outro. -->
+<section class="secao bastidor" id="bastidor" data-montagem="bastidor">
+  <div class="secao__dentro bastidor__grade">
+    <div class="bastidor__texto">
+      <span class="secao__rotulo" data-camada="texto">Por baixo do capô</span>
+      <h2 class="titulo-cond bastidor__titulo"><span data-camada="texto">Do MVP<span class="pq">.</span></span> <span class="vermelho" data-camada="texto">Ao ar.</span></h2>
+      <p class="bastidor__p" data-camada="texto">O BarberGest começou como uma tela de login e um caixa. Arraste para ver a primeira versão virar o sistema que a Barbearia VIP usa hoje, com agenda online, Pix pela Asaas e avisos no WhatsApp.</p>
+      <p class="bastidor__meta"><span data-camada="texto">BarberGest · Barbearia VIP / 2026</span><span data-camada="texto">Django · Pix (Asaas) · WhatsApp</span></p>
+    </div>
+    <div class="bastidor__peca">
+      <div class="comp" data-camada="foto" data-teste="arraste" data-ajusta="-70,44" style="--p: 50%">
+        <img class="comp__depois" src="/img/comp-barbergest-hoje.webp" width="800" height="500" alt="Tela de entrada atual do BarberGest com a marca da Barbearia VIP e a foto de um cliente" loading="lazy" decoding="async" />
+        <div class="comp__antes"><img src="/img/comp-barbergest-mvp.webp" width="800" height="500" alt="Tela de entrada da primeira versão do BarberGest, só com o formulário" loading="lazy" decoding="async" /></div>
+        <span class="comp__etq comp__etq--antes">MVP 0.1</span>
+        <span class="comp__etq comp__etq--depois">Hoje</span>
+        <span class="comp__alca" aria-hidden="true"><svg class="ico"><use href="#u-esq-v"/></svg><svg class="ico"><use href="#u-dir-v"/></svg></span>
+        <input class="comp__range" type="range" min="0" max="100" step="1" value="50" aria-label="Comparar a primeira versão com a de hoje" />
+      </div>
+      <p class="comp__legenda"><span data-camada="texto">Arraste para ver o processo</span><span data-camada="texto">Arraste / setas</span></p>
+    </div>
+  </div>
+</section>
