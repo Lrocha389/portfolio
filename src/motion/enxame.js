@@ -809,9 +809,23 @@ export function enxame(barra) {
     gsap.ticker.add(filaTick);
   }
 
+  // página inteira montada: em vez da fila, o agente some devagar (cada um no seu tempo) e só volta se aparecer
+  // trabalho de novo (um teste, ou "montar de novo")
+  async function some(a, gen, r0) {
+    a.sumiu = true;
+    gsap.to(a.el, { opacity: 0, duration: 0.7, delay: rand(0, 0.6), ease: 'power1.out', overwrite: 'auto' });
+    while (gen === geracao) {
+      await Promise.race([novidade, espera(0.5)]);
+      if (temTrabalho() || rumo !== r0) break;
+    }
+    if (gen === geracao && (temTrabalho() || feitas < camadas.length)) gsap.to(a.el, { opacity: 1, duration: 0.25, overwrite: 'auto' });
+    a.sumiu = false;
+  }
+
   async function naFila(a, gen, r0) {
     para(a);
     modo(a, 'seta');
+    if (feitas >= camadas.length) return some(a, gen, r0);
     a.naFila = true;
     ligaFila();
     while (gen === geracao && a.naFila) {
@@ -1067,7 +1081,7 @@ export function enxame(barra) {
     barra.camadas(0);
     turbo = 1;
     aplicaVel();
-    ags.forEach((a) => { modo(a, 'seta'); a.naFila = false; });
+    ags.forEach((a) => { modo(a, 'seta'); a.naFila = false; a.sumiu = false; gsap.set(a.el, { opacity: 1 }); });
     rolagemPropria = true;
     scrollTo(0, 0);
     setTimeout(() => (rolagemPropria = false), 200);
