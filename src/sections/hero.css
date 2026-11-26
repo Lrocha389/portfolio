@@ -1,6 +1,5 @@
 /* Hero: um pôster de uma tela, na escala de cena (--u, quadro de 1440×900). PORTFÓLIO cheio em vermelho que escurece
-   para baixo, na largura toda; a foto recortada de perfil na frente dele, sumindo no preto; nome e texto à
-   esquerda, lema e números à direita, faixa de rodapé com fio. */
+   para baixo, na largura toda; nome e texto à esquerda, lema e números à direita, faixa de rodapé com fio. */
 .hero {
   position: relative;
   height: calc(900 * var(--u));
@@ -66,25 +65,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-/* foto recortada: na frente do título, some no preto embaixo */
-.hero__foto {
-  position: absolute;
-  z-index: 2;
-  left: calc(50% - 290 * var(--u));
-  bottom: calc(70 * var(--u));
-  width: calc(560 * var(--u));
-  pointer-events: none;
-}
-.hero__retrato { display: block; }
-.hero__retrato img {
-  width: 100%;
-  height: auto;
-  -webkit-mask-image: linear-gradient(180deg, #000 66%, transparent 98%), linear-gradient(90deg, transparent 1%, #000 16%, #000 84%, transparent 99%);
-  -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(180deg, #000 66%, transparent 98%), linear-gradient(90deg, transparent 1%, #000 16%, #000 84%, transparent 99%);
-  mask-composite: intersect;
 }
 
 /* esquerda: quem, cargo, texto, botão, onde */
@@ -253,14 +233,7 @@
     margin-top: 34px;
     font-size: calc((100vw - 2 * var(--margem)) / 3.9);
   }
-  .hero__foto {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    width: 92%;
-    margin: -24% auto 0;
-  }
-  .hero__esq { position: relative; left: auto; top: auto; width: auto; margin-top: -12%; }
+  .hero__esq { position: relative; left: auto; top: auto; width: auto; margin-top: 28px; }
   .hero__ola { font-size: 52px; }
   .hero__nome { font-size: min(104px, calc((100vw - 2 * var(--margem)) / 4.05)); }
   .hero__cargo { font-size: 22px; margin-top: 18px; }

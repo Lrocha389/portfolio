@@ -25,7 +25,7 @@ Vite sem framework, GSAP, Anton, Caveat e Manrope pelo Fontsource. **O site se m
 |---|---|
 | Nome, `<title>`, `description` | `index.html`; `hero.html` (h1), `contato.html` (rodapé e card de replay); nome na nav em `nav.html` (`.nav__nome`, hoje removido) |
 | Hero (cargo, texto, botão, local, números) | `src/sections/hero.html` |
-| Foto do hero | `public/img/kairo-perfil.webp` (com alfa) + `width`/`height` do `<img>` |
+| Foto do hero | removida a pedido (o hero fica só com o título PORTFÓLIO) |
 | Projetos | `src/sections/projetos.html` (imagem, alt, etiqueta, número, nome, categoria/ano, `data-tipo`, `data-busca`) |
 | Ferramentas | `.ferramentas__trilho` em `projetos.html`, "Ver todas (N)" e texto em `interface.js`; logos em `icones.html` |
 | Comparador | segunda `<section>` de `projetos.html`; `proj-balcao.webp` + `wire-balcao.webp` |

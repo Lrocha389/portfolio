@@ -25,7 +25,7 @@ def degrade_vertical(tamanho, topo, meio, pe):
 def main() -> None:
     img = Image.new("RGB", (W, H), PAGINA)
 
-    # halo violeta atrás do retrato
+    # halo violeta à direita
     halo = Image.new("L", (W, H), 0)
     ImageDraw.Draw(halo).ellipse((560, 40, 1160, 700), fill=120)
     halo = halo.filter(ImageFilter.GaussianBlur(110))
@@ -39,21 +39,6 @@ def main() -> None:
     mascara = Image.new("L", (W, H), 0)
     ImageDraw.Draw(mascara).text(((W - tw) / 2 - caixa[0], 70 - caixa[1]), "PORTFÓLIO", font=titulo, fill=255)
     img.paste(degrade_vertical((W, H), (160, 132, 255), (91, 130, 245), (16, 57, 77)), (0, 0), mascara)
-
-    # retrato recortado, esmaecendo embaixo
-    retrato = Image.open(RAIZ / "public/img/leonardo-perfil.webp").convert("RGBA")
-    rh = 600
-    retrato = retrato.resize((round(retrato.width * rh / retrato.height), rh), Image.LANCZOS)
-    alfa = retrato.getchannel("A")
-    fade = degrade_vertical(retrato.size, (255,) * 3, (255,) * 3, (0,) * 3).convert("L")
-    # borda esquerda some aos poucos (nos primeiros 30% da largura)
-    lado = Image.new("L", retrato.size, 255)
-    faixa = round(retrato.width * 0.3)
-    for x in range(faixa):
-        ImageDraw.Draw(lado).line((x, 0, x, retrato.height), fill=round(255 * (x / faixa) ** 1.4))
-    alfa = Image.composite(alfa, Image.new("L", retrato.size, 0), lado)
-    retrato.putalpha(Image.composite(alfa, Image.new("L", retrato.size, 0), fade))
-    img.paste(retrato, (W - retrato.width - 70, H - rh + 30), retrato)
 
     d = ImageDraw.Draw(img)
     # logo e nome

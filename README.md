@@ -24,4 +24,4 @@ Cada envio para a `main` dispara a automação em `.github/workflows/pages.yml`,
 - Textos de cada seção: `src/sections/*.html` (hero, projetos, sobre, trajetória, contato).
 - Cores: `src/styles/tokens.css`.
 - Imagens: `public/img/`. A imagem de compartilhamento é `public/og.jpg`, gerada por `fonte/og.py`.
-- Retrato: `fonte/recorta.py` recorta o fundo e gera `public/img/leonardo-perfil.webp`.
+- O hero não tem foto (a foto de perfil foi retirada).
