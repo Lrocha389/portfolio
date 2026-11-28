@@ -2,7 +2,7 @@
 
 No ar em **https://lrocha389.github.io/portfolio/**.
 
-Portfólio de desenvolvedor full-stack com três trabalhos reais: BarberGest (Barbearia VIP), Gorillaz BJJ Manager e O Festim dos Corvos. A página se monta na frente de quem visita: um enxame de cursores, como num editor multiplayer, desenha cada bloco, copia itens de lista e encaixa as peças.
+Portfólio de desenvolvedor full-stack com dois trabalhos reais: BarberGest (Barbearia VIP) e Gorillaz BJJ Manager. A página se monta na frente de quem visita: um enxame de cursores, como num editor multiplayer, desenha cada bloco, copia itens de lista e encaixa as peças.
 
 Feito em Vite sem framework, com GSAP e as fontes Anton, Caveat e Manrope (Fontsource). Base: template Kairo, da ProfitizeBuild.
 
